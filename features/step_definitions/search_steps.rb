@@ -2,7 +2,7 @@ Given /^I am on the "(.*?)" page of apache2$/ do |url|
   visit url
 end
 
-When /^I click to "a2enmod" for "(.*?)"$/ do ||
+When /^I click to "a2enmod" for "(.*?)"$/ do |arg|
   click_link 'a2enmod'
 end
 
