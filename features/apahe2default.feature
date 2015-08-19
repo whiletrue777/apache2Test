@@ -1,7 +1,7 @@
-# language: en
+# language: ja
 
-Feature: Search
-     Scenario: Search for apache2 
-          Given I am on the "/" page of apache2
-          When I click to "a2enmod"
-          Then I should get response with content-type "text/html"
+機能: Search
+     シナリオ: Search for apache2 
+          前提 ページを表示する
+          もし "a2enmod"をクリックする
+          ならば "http://manpages.debian.org/cgi-bin/man.cgi?query=a2enmod"が表示されること
