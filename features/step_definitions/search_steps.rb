@@ -1,11 +1,12 @@
-Given /^I am on the "(.*?)" page of apache2$/ do |url|
-  visit url
+前提(/^ページを表示する$/) do
+ visit "http://ec2-54-187-237-193.us-west-2.compute.amazonaws.com/"
 end
 
-When /^I click to "a2enmod" for "(.*?)"$/ do |arg|
-  click_link 'a2enmod'
+もし(/^"([^"]*)"をクリックする$/) do |ref|
+ click_link(link=$ref)
 end
 
-Then /^I should get response with content\-type "(.*?)"$/ do |content_type|
-  page.response_headers['Content-Type'].should match('^' + Regexp.escape(content_type))
+ならば(/^"([^"]*)"が表示されること$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
 end
+
