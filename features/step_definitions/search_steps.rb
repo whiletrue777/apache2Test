@@ -6,7 +6,7 @@ end
  click_link(link=$ref)
 end
 
-ならば(/^"([^"]*)"が表示されること$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+ならば(/^"([^"]*)"が表示されること$/) do |url|
+ current_url.should($url)
 end
 
